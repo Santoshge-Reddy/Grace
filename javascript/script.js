@@ -7,10 +7,6 @@ $(document).ready(function() {
     $('.mainPointer').removeClass('speed-1');
     $('.mainPointer').addClass('speed-2');
 
-    element.addEventListener('touchstart', function(ev) {
-      sound.play();
-    })
-
     sound.play();
   },
   function () {
@@ -22,7 +18,23 @@ $(document).ready(function() {
     $('.mainPointer').removeClass('speed-2');
     sound.pause();
   });
+  
+  
+  
+     // prevent default action -right click
+        //Disable full page
+        $("body").on("contextmenu",function(e){
+            return false;
+        });
 });
+
+
+
+
+
+
+
+
 
 <!--Start of Tawk.to Script-->
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
