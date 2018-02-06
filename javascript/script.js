@@ -7,7 +7,9 @@ $(document).ready(function() {
     $('.mainPointer').removeClass('speed-1');
     $('.mainPointer').addClass('speed-2');
 
-
+    element.addEventListener('touchstart', function(ev) {
+      sound.play();
+    })
 
     sound.play();
   },
